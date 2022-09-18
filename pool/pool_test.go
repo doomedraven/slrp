@@ -211,7 +211,7 @@ func TestReceiveHalt(t *testing.T) {
 	assert.Equal(t, time.Minute, v)
 }
 
-func TestCounterOnHalt(t *testing.T) {
+func TestCounterOnHalt(t *testing.T) { // flaky
 	pool, runtime := app.MockStartSpin(NewPool(history.NewHistory()))
 	defer runtime.Stop()
 
